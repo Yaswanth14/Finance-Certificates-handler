@@ -15,11 +15,12 @@
     <title>PDF Viewer</title>
 </head>
 <body>
-    <img src='cover.jpeg' style='min-width: 100%; height: 100px; padding: 0; margin: 0;'>
     <?php
         $path = 'C:/pdf/';
-        $id = $_GET['id'];
-        $selectQuery = "select filename from pdf_main where id=".$id;
+        $quater = $_GET['quater'];
+        $year = $_GET['year'];
+        $user = $_SESSION['USER_DATA']['username'];
+        $selectQuery = "SELECT filename FROM pdf_main WHERE quater='".$quater."' AND year='".$year."' AND username='".$user."'";
 		$squery = mysqli_query($con, $selectQuery);
         $row = mysqli_fetch_assoc($squery);
         $filename = $row["filename"];
@@ -34,7 +35,6 @@
         // Read the file 
         @readfile($file);
 
-        echo $filename;
+        echo $file;
     ?>
 </body>
-</html>

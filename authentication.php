@@ -40,7 +40,7 @@
             echo "
                 <img src='cover.jpeg' style='min-width: 100%; height: 100px; padding: 0; margin: 0;'>
                 <h1>Login Failed. Invalid username or password</h1>
-                <button><a style='text-decoration:none;' href='home.html'>Try again</a></button>
+                <button><a style='text-decoration:none;' href='login.html'>Try again</a></button>
             ";
         }    
 ?>  
