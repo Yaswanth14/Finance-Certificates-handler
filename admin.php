@@ -146,10 +146,10 @@
 							while (($result = mysqli_fetch_assoc($squery))) {
 						?>
                             <tr>
-                                <td\><?php echo $result['id']; ?></td>
+                                <td><?php echo $result['id']; ?></td>
                                 <td><?php echo $result['username']; ?></td>
                                 <td><a><?php echo $result['filename']; ?></a></td>
-                                <td><a>GET</a></td>
+                                <td><a href="adminpdf.php?id=<?php echo $result['id']; ?>" target="_blank">GET</a></td>
                             </tr>
 						<?php
 							}
